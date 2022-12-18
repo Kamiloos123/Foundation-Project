@@ -19,3 +19,4 @@ form.addEventListener('submit', (event) => {
   // Display the results
   alert(`You scored ${score} out of 2`);
 });
+
