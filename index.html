@@ -1,7 +1,15 @@
 <!-- HTML for the questionnaire -->
 <form id="questionnaire">
   <h1>Questionnaire</h1>
+
   <p>Please answer the following questions about yourself:</p>
+  <p>
+    <label for="questionGender">What gender do you identify as?</label><br>
+    <input type="radio" name="questionGender" value="male"> Male<br>
+    <input type="radio" name="questionGender" value="female"> Female<br>
+    <input type="radio" name="questionGender" value="other"> Other<br>
+    <input type="radio" name="questionGender" value="None"> Prefer not to say<br>
+  </p>
   <p>
     <label for="questionAge">What age range group do you fit into from the following?</label><br>
     <input type="radio" name="questionAge" value="Under18"> Under 18<br>
@@ -9,13 +17,6 @@
     <input type="radio" name="questionAge" value="Over25"> 26-45<br>
     <input type="radio" name="questionAge" value="Over45"> 46+<br>
     <input type="radio" name="questionAge" value="None"> Prefer not to say<br>
-  </p>
-  <p>
-    <label for="questionGender">What gender do you identify as?</label><br>
-    <input type="radio" name="questionGender" value="male"> Male<br>
-    <input type="radio" name="questionGender" value="female"> Female<br>
-    <input type="radio" name="questionGender" value="other"> Other<br>
-    <input type="radio" name="questionGender" value="None"> Prefer not to say<br>
   </p>
   <p>
     <label for="questionEthnicity">What is your ethnic background? Choose from one option that best describes your ethnic group or background.</label><br>
