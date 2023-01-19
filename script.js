@@ -3,7 +3,7 @@ const form = document.getElementById('questionnaire');
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-
+  location.href='questionnaire.html';
   let score = 0;
 
   // Validate the form and calculate the score
