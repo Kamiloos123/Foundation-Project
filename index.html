@@ -28,14 +28,14 @@
     <input type="radio" name="questionAge" value="None"> Prefer not to say<br>
   </p>
   <!-- Ethnicity questions -->
-  <p>
+  <!-- <p>
     <label for="questionEthnicity">What is your ethnic background? Choose from one option that best describes your ethnic group or background.</label><br>
     <input type="radio" name="questionEthnicity" value="caucasian"> White / Caucasian<br>
     <input type="radio" name="questionEthnicity" value="asian"> Asian / Asian British<br>
     <input type="radio" name="questionEthnicity" value="black"> Black / African / Caribbean / Black British<br>
     <input type="radio" name="questionEthnicity" value="mixed"> Mixed / Multiple ethnic groups<br>
     <input type="radio" name="questionEthnicity" value="none"> Prefer not to say<br>
-  </p>
+  </p> -->
   <!-- Education questions -->
   <p>
     <label for="questionEducation">Please select the highest level of education that you have attained?</label><br>
@@ -49,16 +49,29 @@
     <input type="radio" name="questionEducation" value="other"> Other<br>
     <input type="radio" name="questionEducation" value="none"> Prefer not to say<br>
   </p>
-  <!-- Insert questions -->
+  <!-- IT questions -->
   <p>
-    <label for="questionInsertHere">What is your InsertHere?</label><br>
-    <input type="radio" name="questionInsertHere" value="male"> Male<br>
-    <input type="radio" name="questionInsertHere" value="female"> Female<br>
-    <input type="radio" name="questionInsertHere" value="other"> Other<br>
+    <label for="questionIT">Do you have an IT experience?</label><br>
+    <input type="radio" name="questionIT" value="Less1"> Less than 1 Year<br>
+    <input type="radio" name="questionIT" value="1"> 1 Year<br>
+    <input type="radio" name="questionIT" value="2+">2 Years<br>
+    <input type="radio" name="questionIT" value="3+">3+ Years<br>
+    <input type="radio" name="questionIT" value="None">None<br>
   </p>
 <!-- Submit button -->
   <button type="submit">Submit</button>
 </form>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>cookie goes here</p>
+    <button id="yesBtn">Yes</button>
+    <button id="noBtn">No</button>
+  </div>
+</div>
+
+
 
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="script.js"></script>
