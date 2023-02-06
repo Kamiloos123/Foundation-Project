@@ -17,9 +17,9 @@ form {
 
 /* CSS for styling the background */
   body {
-    background-image:  url("Pattern.gif");
+    background-image:  url("20700900.jpg");
     background-origin: border-box;
-    background-size: auto  
+    background-size: 100% 150%;  
   }
 
   /* The Modal (background) */
