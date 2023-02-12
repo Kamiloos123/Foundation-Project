@@ -18,8 +18,8 @@ form {
 /* CSS for styling the background */
   body {
     background-image:  url("20700900.jpg");
-    background-origin: border-box;
-    background-size: 100% 150%;  
+    background-origin: auto;
+    background-size: 100% 100%;  
   }
 
   /* The Modal (background) */
@@ -67,3 +67,28 @@ form {
     border-radius: 5px;
     cursor: pointer;
   }
+  .question {
+    margin-bottom: 1em;
+    font-weight: bold;
+  }
+  
+  .rating {
+    font-size: 1em;
+    width: 8em;
+    padding: 0.25em;
+  }
+  
+  .selected-value {
+    font-weight: bold;
+    margin-top: 0.5em;
+  }
+  
+  .feedback {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 0.5em;
+  }
+  

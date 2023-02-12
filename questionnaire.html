@@ -6,47 +6,100 @@
   </head>
 </html>
 <form>
+  <div class="question">
+    <label for="questionPrivacy">How much do you care about your privacy on the internet?</label>
+    <select id="questionPrivacy" class="rating">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+  </div>
+  
 <p>
-  <label for="questionInsertHere">What is your InsertHere?</label><br>
-  <input type="radio" name="questionInsertHere" value="Answer1"> Answer1<br>
-  <input type="radio" name="questionInsertHere" value="female"> Answer2<br>
-  <input type="radio" name="questionInsertHere" value="other"> Answer3<br>
+  <label for="questionAvoid">Do you avoid certain websites if they use cookies</label><br>
+  <input type="radio" name="questionAvoid" value="Y"> Yes, always<br>
+  <input type="radio" name="questionAvoid" value="N"> No, never have<br>
+  <input type="radio" name="questionAvoid" value="S"> Sometimes, have done in the past<br>
+  <input type="radio" name="questionAvoid" value="I"> Only if it's inconvient<br>
+</p>
+
+<div class="question">How aware are you of what you're accepting when allowing cookies</label>
+  <select id="questionAware" class="rating">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </select>
+</div>
+
+<p>
+  <label for="questionCybersecurity">Are you or anyone close to you involved in cybersecurity?</label><br>
+  <input type="radio" name="questionCybersecurity" value="Work"> Yes, I work in cybersecurity<br>
+  <input type="radio" name="questionCybersecurity" value="Study"> Yes, I study cybersecurity<br>
+  <input type="radio" name="questionCybersecurity" value="Family"> A friend or family member is in cybersecurity<br>
+  <input type="radio" name="questionCybersecurity" value="None"> I have none at all<br>
 </p>
 
 <p>
-  <label for="questionInsertHere">What is your InsertHere?</label><br>
-  <input type="radio" name="questionInsertHere" value="Answer1"> Answer1<br>
-  <input type="radio" name="questionInsertHere" value="female"> Answer2<br>
-  <input type="radio" name="questionInsertHere" value="other"> Answer3<br>
+  <label for="questionResponsiblePrivacy">Who do you feel is responsible for privacy of information?</label><br>
+  <input type="radio" name="questionResponsiblePrivacy" value="User"> The User<br>
+  <input type="radio" name="questionResponsiblePrivacy" value="Website"> The website provider<br>
+  <input type="radio" name="questionResponsiblePrivacy" value="Gov"> The Government<br>
+  <input type="radio" name="questionResponsiblePrivacy" value="Virus"> Anti-Virus Software<br>
+  <input type="radio" name="questionResponsiblePrivacy" value="Tech"> The technology manufacturers<br>
 </p>
 
 <p>
-  <label for="questionInsertHere">What is your InsertHere?</label><br>
-  <input type="radio" name="questionInsertHere" value="Answer1"> Answer1<br>
-  <input type="radio" name="questionInsertHere" value="female"> Answer2<br>
-  <input type="radio" name="questionInsertHere" value="other"> Answer3<br>
+  <label for="questionInfo">Do you feel like cookies notices give enough information to users?</label><br>
+  <input type="radio" name="questionInfo" value="Y"> Yes, I feel like the amount given is sufficient<br>
+  <input type="radio" name="questionInfo" value="N"> No, There is nowhere enough information<br>
+  <input type="radio" name="questionInfo" value="M"> I feel like a little more information would be beneficial<br>
 </p>
 
 <p>
-  <label for="questionInsertHere">What is your InsertHere?</label><br>
-  <input type="radio" name="questionInsertHere" value="Answer1"> Answer1<br>
-  <input type="radio" name="questionInsertHere" value="female"> Answer2<br>
-  <input type="radio" name="questionInsertHere" value="other"> Answer3<br>
+  <label for="questionFreq">How often do you interact with cookies?</label><br>
+  <input type="radio" name="questionFreq" value="N"> Never<br>
+  <input type="radio" name="questionFreq" value="R"> Rarely<br>
+  <input type="radio" name="questionFreq" value="S"> Sometimes<br>
+  <input type="radio" name="questionFreq" value="O"> Often<br>
+  <input type="radio" name="questionFreq" value="A"> Always<br>
 </p>
 
 <p>
-  <label for="questionInsertHere">What is your InsertHere?</label><br>
-  <input type="radio" name="questionInsertHere" value="Answer1"> Answer1<br>
-  <input type="radio" name="questionInsertHere" value="female"> Answer2<br>
-  <input type="radio" name="questionInsertHere" value="other"> Answer3<br>
+  <label for="questionAccept">What would persuade you most to accept cookies?</label><br>
+  <input type="radio" name="questionAccept" value="User"> Improved user experience<br>
+  <input type="radio" name="questionAccept" value="Sign"> Auto sign in<br>
+  <input type="radio" name="questionAccept" value="Ads"> Personalised ads<br>
+  <input type="radio" name="questionAccept" value="Pref"> Remember website Preferneces<br>
+  <input type="radio" name="questionAccept" value="None"> None of the above<br>
 </p>
 
 <p>
-  <label for="questionInsertHere">What is your InsertHere?</label><br>
-  <input type="radio" name="questionInsertHere" value="Answer1"> Answer1<br>
-  <input type="radio" name="questionInsertHere" value="female"> Answer2<br>
-  <input type="radio" name="questionInsertHere" value="other"> Answer3<br>
+  <label for="questionDescribe">Which of these would describe you best?</label><br>
+  <input type="radio" name="questionDescribe" value="Inst"> I accept cookies instantly<br>
+  <input type="radio" name="questionDescribe" value="Ness"> I only accept the nessasary cookies<br>
+  <input type="radio" name="questionDescribe" value="Read"> I Read the cookies policy before I accept anything<br>
+  <input type="radio" name="questionDescribe" value="Decl"> I always decline cookies if I can<br>
 </p>
+
+<div class="question">
+  <label for="QuestionOpen">Why do you think people accept cookies</label>
+  <input type="text" id="feedback-input" class="feedback" placeholder="Enter your answer here...">
+</div>
+
 
 <!-- Submit button -->
 <button type="send">Submit</button>

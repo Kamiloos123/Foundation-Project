@@ -60,3 +60,10 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+const ratingSelect = document.getElementById('rating-select');
+const selectedValue = document.querySelector('.selected-value');
+
+ratingSelect.addEventListener('change', () => {
+  const selectedOption = ratingSelect.options[ratingSelect.selectedIndex];
+  selectedValue.textContent = `You rated our website a ${selectedOption.value}/10.`;
+});

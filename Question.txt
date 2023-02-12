@@ -8,7 +8,7 @@
     1-10 scale
 
 4. Are you or anyone close to you involved in cybersecurity? - Define involved eg. Working, Studying.
-    Yes, I am / Friend or Family member / No
+    Studying / Working / Friend or Family member / No
 
 5. Who do you feel is responsible for privacy of information?
     The user / The website provider / The government / Anti-Virus Software (Not used for privacy) / Technology manufacturers (Macs are safer than PCs) /  - More options - Make a tickbox
