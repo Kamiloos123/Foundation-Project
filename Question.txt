@@ -1,27 +1,34 @@
-1.How much do you care about privacy on the internet
+1.How much do you care about your privacy on the internet
     1-10 scale
 
 2. Do you avoid certain websites if they use cookies?
-    yes, no, sometimes, 
+    yes, no, sometimes, - more options
 
-3. Are you aware what you're accepting when allowing cookies?
+3. How aware you of what you're accepting when allowing cookies?
     1-10 scale
 
-4. Are you or anyone close to  you involved in cybersecurity
-    Yes, I am / Friend or Family member / no
+4. Are you or anyone close to you involved in cybersecurity? - Define involved eg. Working, Studying.
+    Yes, I am / Friend or Family member / No
 
 5. Who do you feel is responsible for privacy of information?
-    The user / The website provider / The government
+    The user / The website provider / The government / Anti-Virus Software (Not used for privacy) / Technology manufacturers (Macs are safer than PCs) /  - More options - Make a tickbox
 
-6. Do you feel like cookie noticies are enough?
-    Yes, No
-        If No, Why
+6. Do you feel like cookie notices give enough information to users?
+    Yes, No - Consider more options
 
-7. How often do you interact with cookies
+7. How often do you interact with cookies?
     Not very often - Very often
 
-8. What would draw you most to accept cookies?
-    Improve user experience / Auto Sign in / Personalised ads / Remember website Prefernces / None of the above
+8. What would draw (Persuade) you most to accept cookies?
+    Improved user experience / Auto Sign in / Personalised ads / Remember website Prefrences / None of the above
 
-Open. Why woul you/others accept cookies without reading
+9. Which of these would describle you best?
+    Accept cookies instantly
+    Only accept nessesary cookies
+    Read the cookie terms and make a decison based on their information
+    Always decline cookies    
+
+Open. Why do you think people accept cookies?
     Open ended
+
+    ##Make a word map and use the number of word frequency as responses.
