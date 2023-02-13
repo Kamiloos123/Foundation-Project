@@ -1,29 +1,24 @@
-/* CSS for styling the questionnaire */
 form {
-    width: 50%;
-    margin: 0 auto;
-    text-align: left;
-  }
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+}
 
-  /* CSS for styling the labels */
-  label {
-    font-weight: bold;
-  }
+label {
+  font-weight: bold;
+}
 
-  /* CSS for styling the radio buttons */
-  input[type="radio"] {
-    margin: 0 10px 0 0;
-  }
+input[type="radio"] {
+  margin: 0 10px 0 0;
+}
 
-/* CSS for styling the background */
-  body {
-    background-image:  url("20700900.jpg");
-    background-origin: auto;
-    background-size: 100% 100%;  
-  }
+body {
+  background-image:  url("20700900.jpg");
+  background-origin: auto;
+  background-size: 100% 100%;  
+}
 
-  /* The Modal (background) */
-  .modal {
+.modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     top: 50%; /* Center vertically */
@@ -32,63 +27,68 @@ form {
     background-color: white;
     padding: 20px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    transition: bottom 0.3s;
-  }
+  width: 90%;
+  max-width: 400px;
+}
 
-  /* The Close Button */
-  .close {
-    color: black;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-  }
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 
   /* The "Yes" and "No" buttons */
-  .modal-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 
-  .modal-buttons button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .question {
-    margin-bottom: 1em;
-    font-weight: bold;
-  }
-  
-  .rating {
-    font-size: 1em;
-    width: 8em;
-    padding: 0.25em;
-  }
-  
-  .selected-value {
-    font-weight: bold;
-    margin-top: 0.5em;
-  }
-  
-  .feedback {
-    width: 100%;
-    padding: 0.5em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    margin-top: 0.5em;
-  }
-  
+.modal-buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.question {
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+.rating {
+  font-size: 1em;
+  width: 8em;
+  padding: 0.25em;
+}
+
+.selected-value {
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+
+.feedback {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 0.5em;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}

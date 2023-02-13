@@ -8,8 +8,20 @@
 <form id="questionnaire">
   <h1>Questionnaire</h1>
 
+  <body>
+
+    This survey is being completed as part of a student project at Durham University. 
+    All data will be treated confidentially and will not be shared with any third parties. 
+    The data will be used to help us understand how people feel about their privacy on the internet. 
+    The survey should take no longer than 5 minutes to complete. 
+    All participances are voluntary and you can withdraw at any time. 
+    Thank you for your time. 
+
+  </body>
+
+
   <!-- Gender questions-->
-  <p>Please answer the following questions about yourself:</p>
+  <p><b>Please answer the following questions about yourself:</b></p>
   <p>
     <label for="questionGender">What gender do you identify as?</label><br>
     <input type="radio" name="questionGender" value="male"> Male<br>
@@ -75,3 +87,16 @@
 
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="script.js"></script>
+<style>
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  #questionnaire {
+    min-height: 100%;
+    position: relative;
+  }
+</style>
