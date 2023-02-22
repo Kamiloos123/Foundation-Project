@@ -12,11 +12,6 @@ header("Access-Control-Allow-Headers: Content-Type");
 error_reporting(E_ALL); ini_set('display_errors', 1);
 echo "Hello World";
 
-// Only allow POST requests
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(405);
-    exit;
-}
 
 // Allow from any origin
 header('Access-Control-Allow-Origin: *');
