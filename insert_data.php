@@ -1,5 +1,14 @@
 <?php
+    // Only allow POST requests
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    exit;
+  }
 
+  // Allow from any origin
+  header('Access-Control-Allow-Origin: *');
+
+// Database connection settings
 $host = 'kamil-foundation-server.mysql.database.azure.com';
 $user = 'admin1';
 $password = 'Waser567765.';
