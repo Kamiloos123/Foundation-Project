@@ -1,5 +1,6 @@
 <?php
 
+header("Access-Control-Allow-Methods: POST");
 error_reporting(E_ALL); ini_set('display_errors', 1);
 echo "Hello World";
 
@@ -14,7 +15,7 @@ header('Access-Control-Allow-Origin: *');
 
 // Database connection settings
 $host = 'kamil-foundation-server.mysql.database.azure.com';
-$user = 'admin1@kamil-foundation-server';
+$user = 'admin1';
 $password = 'Waser567765.';
 $database = 'project';
 $port = 3306;
