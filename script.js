@@ -1,7 +1,7 @@
 // JavaScript for validating the questionnaire and sending them to a database
 const form = document.getElementById('questionnaire');
 
-form.addEventListener('submit', async (event) => {
+form.addEventListener('submit', (event) => {
   event.preventDefault();
 
   const answer1 = document.querySelector('input[name="questionGender"]:checked').value;
@@ -27,7 +27,6 @@ form.addEventListener('submit', async (event) => {
   };
   xhr.send(`questionGender=${answer1}&questionAge=${answer2}&questionEducation=${answer3}&questionIT=${answer4}`);
 });
-
 
 
 // Get the modal
