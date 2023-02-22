@@ -1,8 +1,7 @@
 // JavaScript for validating the questionnaire and sending them to a database
 const form = document.getElementById('questionnaire');
 
-const mysql = require('mysql2/promise');
-
+import * as mysql from 'mysql2/promise';
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
