@@ -12,7 +12,7 @@ form.addEventListener('submit', (event) => {
   const answer4 = document.querySelector('input[name="questionIT"]:checked').value;
 
   const xhr = new XMLHttpRequest();
-  xhr.open('POST', 'https://salmon-forest-06a60dc03.2.azurestaticapps.net/insert_data.php', true);
+  xhr.open('POST', 'insert_data.php', true);
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   xhr.onload = function () {
     if (xhr.status === 200) {
