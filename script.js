@@ -1,6 +1,12 @@
 // JavaScript for validating the questionnaire and sending them to a database
 const form = document.getElementById('questionnaire');
 
+if ($_SERVER['REQUEST_METHOD'] !== 'POST' && $_SERVER['REQUEST_METHOD'] !== 'GET' && $_SERVER['REQUEST_METHOD'] !== 'PUT') {
+  http_response_code(405);
+  exit;
+}
+
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
