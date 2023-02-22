@@ -12,22 +12,18 @@ header('Access-Control-Allow-Origin: *');
 
 // Database connection settings
 $host = 'kamil-foundation-server.mysql.database.azure.com';
-$user = 'admin1';
+$user = 'admin1@kamil-foundation-server';
 $password = 'Waser567765.';
 $database = 'project';
 $port = 3306;
-$ssl = array(
-    'ca' => 'DigiCertTLSRSA4096RootG5.crt',
-    'verify_peer' => true,
-);
+$ssl_ca = 'DigiCertTLSRSA4096RootG5.crt';
 
 // Connect to the database using PDO
 try {
-    $dsn = "mysql:host=$host;dbname=$database;port=$port";
+    $dsn = "mysql:host=$host;dbname=$database;port=$port;charset=utf8mb4";
     $options = array(
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::MYSQL_ATTR_SSL_CA => $ssl['ca'],
-        PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => $ssl['verify_peer']
+        PDO::MYSQL_ATTR_SSL_CA => $ssl_ca
     );
     $conn = new PDO($dsn, $user, $password, $options);
 } catch (PDOException $e) {
