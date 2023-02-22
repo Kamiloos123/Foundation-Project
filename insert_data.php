@@ -17,7 +17,7 @@ $password = 'Waser567765.';
 $database = 'project';
 $port = 3306;
 $ssl = array(
-    'ca' => 'C:\Users\Kamil\Documents\GitHub\Foundation-Project\DigiCertTLSRSA4096RootG5.crt',
+    'ca' => 'DigiCertTLSRSA4096RootG5.crt',
     'verify_peer' => true,
 );
 
