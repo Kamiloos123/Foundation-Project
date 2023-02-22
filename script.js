@@ -3,6 +3,7 @@ const form = document.getElementById('questionnaire');
 
 const mysql = require('mysql2/promise');
 
+
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
 
@@ -18,22 +19,16 @@ form.addEventListener('submit', async (event) => {
   });
 
   try {
-    const answers = document.querySelectorAll('input[type="radio"]:checked');
-    const answersArray = Array.from(answers);
+    const answer1 = document.querySelector('input[name="questionGender"]:checked').value;
+    const answer2 = document.querySelector('input[name="questionAge"]:checked').value;
+    const answer3 = document.querySelector('input[name="questionEducation"]:checked').value;
+    const answer4 = document.querySelector('input[name="questionIT"]:checked').value;
 
-    if (answersArray.length < 5) {
-      alert('Please answer all questions');
-    } else {
-      // Insert answers into the database
-      for (let i = 0; i < answersArray.length; i++) {
-        const answer = answersArray[i].value;
-        await connection.query('INSERT INTO demographics VALUES (?)', [answer]);
-      }
+    await connection.query('INSERT INTO demographics (Gender, Age, Education, IT) VALUES (?, ?, ?, ?)', [answer1, answer2, answer3, answer4]);
       
-      alert('Thank you for your answers');
-      // Get the values of the form and start new
-      location.href = 'questionnaire.html';
-    }
+    alert('Thank you for your answers');
+    // Get the values of the form and start new
+    location.href = 'questionnaire.html';
   } catch (err) {
     console.error(err);
     alert('An error occurred while submitting your answers. Please try again later.');
@@ -41,6 +36,7 @@ form.addEventListener('submit', async (event) => {
     connection.end();
   }
 });
+
 
 
 
