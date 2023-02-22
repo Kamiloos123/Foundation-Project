@@ -1,41 +1,32 @@
 // JavaScript for validating the questionnaire and sending them to a database
 const form = document.getElementById('questionnaire');
 
-import * as mysql from 'mysql2/promise';
-
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  const connection = await mysql.createConnection({
-    host: 'kamil-foundation-server.mysql.database.azure.com',
-    user: 'admin1',
-    password: 'Waser567765.',
-    database: 'project',
-    port: 3306,
-    ssl: {
-      ca: fs.readFileSync('DigiCertTLSRSA4096RootG5.crt'),
-    },
-  });
+  const answer1 = document.querySelector('input[name="questionGender"]:checked').value;
+  const answer2 = document.querySelector('input[name="questionAge"]:checked').value;
+  const answer3 = document.querySelector('input[name="questionEducation"]:checked').value;
+  const answer4 = document.querySelector('input[name="questionIT"]:checked').value;
 
-  try {
-    const answer1 = document.querySelector('input[name="questionGender"]:checked').value;
-    const answer2 = document.querySelector('input[name="questionAge"]:checked').value;
-    const answer3 = document.querySelector('input[name="questionEducation"]:checked').value;
-    const answer4 = document.querySelector('input[name="questionIT"]:checked').value;
-
-    await connection.query('INSERT INTO demographics (Gender, Age, Education, IT) VALUES (?, ?, ?, ?)', [answer1, answer2, answer3, answer4]);
-      
-    alert('Thank you for your answers');
-    // Get the values of the form and start new
-    location.href = 'questionnaire.html';
-  } catch (err) {
-    console.error(err);
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', 'insert_data.php', true);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      alert(xhr.responseText);
+      location.href = 'questionnaire.html';
+    } else {
+      console.error(xhr.statusText);
+      alert('An error occurred while submitting your answers. Please try again later.');
+    }
+  };
+  xhr.onerror = function () {
+    console.error(xhr.statusText);
     alert('An error occurred while submitting your answers. Please try again later.');
-  } finally {
-    connection.end();
-  }
+  };
+  xhr.send(`questionGender=${answer1}&questionAge=${answer2}&questionEducation=${answer3}&questionIT=${answer4}`);
 });
-
 
 
 
