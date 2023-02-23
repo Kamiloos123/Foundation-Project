@@ -22,7 +22,7 @@ form.addEventListener('submit', (event) => {
     answer4: answer4
   };
   
-  emailjs.send('my_service', 'my_template', templateParams)
+  emailjs.send('service_tnkzhnv', 'template_pmnig42', templateParams)
     .then(function(response) {
        alert("Thank you for your answers.");
        location.href = 'questionnaire.html';
