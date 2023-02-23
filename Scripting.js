@@ -3,9 +3,9 @@ const form = document.getElementById('Answers');
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const answer1 = document.querySelector('input[name="questionPrivacy"]:checked').value;
+  const answer1 = document.querySelector('input[name="questionPrivacy"]:selected-value').value;
   const answer2 = document.querySelector('input[name="questionAvoid"]:checked').value;
-  const answer3 = document.querySelector('input[name="questionCybersecurity"]:checked').value;
+  const answer3 = document.querySelector('input[name="questionCybersecurity"]:selected-value').value;
   const answer4 = document.querySelector('input[name="questionResponsiblePrivacy"]:checked').value;
   const answer5 = document.querySelector('input[name="questionInfo"]:checked').value;
   const answer6 = document.querySelector('input[name="questionFreq"]:checked').value;
@@ -34,7 +34,6 @@ form.addEventListener('submit', (event) => {
   emailjs.send('service_tnkzhnv', 'template_sg6471a', templateParams)
     .then(function(response) {
        alert("Thank you for your answers. You can close this page now.");
-       location.href = 'questionnaire.html';
     }, function(error) {
        console.error(error);
        alert('An error occurred while submitting your answers. Please try again later.');
