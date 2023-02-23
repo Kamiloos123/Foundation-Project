@@ -11,7 +11,7 @@ form.addEventListener('send', (event) => {
   const answer6 = document.querySelector('input[name="questionFreq"]:checked').value;
   const answer7 = document.querySelector('input[name="questionAccept"]:checked').value;
   const answer8 = document.querySelector('input[name="questionDescribe"]:checked').value;
-  const answer9 = document.querySelector('input[name="QuestionOpen]"').value;
+  const answer9 = document.querySelector('input[name="QuestionOpen"]').value;
   
 
   // EmailJS API
