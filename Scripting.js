@@ -1,6 +1,6 @@
 const form = document.getElementById('Answers');
 
-form.addEventListener('submit', (event) => {
+form.addEventListener('send', (event) => {
   event.preventDefault();
 
   const answer1 = document.querySelector('input[name="questionPrivacy"]:selected-value').value;
