@@ -115,15 +115,15 @@
   form.addEventListener('send', (event) => {
     event.preventDefault();
   
-    const answer1 = document.querySelector('input[name="questionPrivacy"]:selected-value').value;
+    const answer1 = document.querySelector('questionPrivacy').value;
     const answer2 = document.querySelector('input[name="questionAvoid"]:checked').value;
-    const answer3 = document.querySelector('input[name="questionCybersecurity"]:selected-value').value;
-    const answer4 = document.querySelector('input[name="questionResponsiblePrivacy"]:checked').value;
-    const answer5 = document.querySelector('input[name="questionInfo"]:checked').value;
+    const answer3 = document.querySelector('questionAware').value;
+    const answer4 = document.querySelector('input[name="questionCybersecurity"]:checked').value;
+    const answer5 = document.querySelector('input[name="questionResponsiblePrivacy"]:checked').value;
     const answer6 = document.querySelector('input[name="questionFreq"]:checked').value;
     const answer7 = document.querySelector('input[name="questionAccept"]:checked').value;
     const answer8 = document.querySelector('input[name="questionDescribe"]:checked').value;
-    const answer9 = document.querySelector('input[name="QuestionOpen"]').value;
+    const answer9 = document.querySelector('QuestionOpen').value;
     
   
     // EmailJS API
