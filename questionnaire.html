@@ -8,7 +8,7 @@
 </html>
 <form id="Answers">
   
-  <div class="question">
+  <!-- <div class="question">
     <label for="questionPrivacy">On a scale from 1 - 10, where 10 is the most important. How much do you care about your privacy on the internet?</label>
     <select id="questionPrivacy" class="rating">
       <option value="1">1</option>
@@ -22,7 +22,21 @@
       <option value="9">9</option>
       <option value="10">10</option>
     </select>
-  </div>
+  </div> -->
+
+  <p>
+    <label for="questionPrivacy">On a scale from 1 - 10, where 10 is the most important. How much do you care about your privacy on the internet?</label><br>
+    <input type="radio" name="questionPrivacy" value="1"> 1<br>
+    <input type="radio" name="questionPrivacy" value="2"> 2<br>
+    <input type="radio" name="questionPrivacy" value="3"> 3<br>
+    <input type="radio" name="questionPrivacy" value="4"> 4<br>
+    <input type="radio" name="questionPrivacy" value="5"> 5<br>
+    <input type="radio" name="questionPrivacy" value="6"> 6<br>
+    <input type="radio" name="questionPrivacy" value="7"> 7<br>
+    <input type="radio" name="questionPrivacy" value="8"> 8<br>
+    <input type="radio" name="questionPrivacy" value="9"> 9<br>
+    <input type="radio" name="questionPrivacy" value="10"> 10<br>
+  </p>
   
 <p>
   <label for="questionAvoid">Do you avoid certain websites if they use cookies</label><br>
@@ -32,7 +46,7 @@
   <input type="radio" name="questionAvoid" value="I"> Only if it's inconvient<br>
 </p>
 
-<div class="question">On a scale from 1 - 10, where 10 is the most aware. How aware are you of what you're accepting when allowing cookies</label>
+<!-- <div class="question">On a scale from 1 - 10, where 10 is the most aware. How aware are you of what you're accepting when allowing cookies</label>
   <select id="questionAware" class="rating">
     <option value="1">1</option>
     <option value="2">2</option>
@@ -45,7 +59,21 @@
     <option value="9">9</option>
     <option value="10">10</option>
   </select>
-</div>
+</div> -->
+
+<p>
+  <label for="questionAware">On a scale from 1 - 10, where 10 is the most aware. How aware are you of what you're accepting when allowing cookies</label><br>
+  <input type="radio" name="questionAware" value="1"> 1<br>
+  <input type="radio" name="questionAware" value="2"> 2<br>
+  <input type="radio" name="questionAware" value="3"> 3<br>
+  <input type="radio" name="questionAware" value="4"> 4<br>
+  <input type="radio" name="questionAware" value="5"> 5<br>
+  <input type="radio" name="questionAware" value="6"> 6<br>
+  <input type="radio" name="questionAware" value="7"> 7<br>
+  <input type="radio" name="questionAware" value="8"> 8<br>
+  <input type="radio" name="questionAware" value="9"> 9<br>
+  <input type="radio" name="questionAware" value="10"> 10<br>
+</p>
 
 <p>
   <label for="questionCybersecurity">Are you or anyone close to you involved in cybersecurity?</label><br>
@@ -115,9 +143,9 @@
   form.addEventListener('submit', (event) => {
     event.preventDefault();
   
-    const answer1 = document.querySelector('questionPrivacy').value;
+    const answer1 = document.querySelector('input[name="questionPrivacy"]:checked').value;
     const answer2 = document.querySelector('input[name="questionAvoid"]:checked').value;
-    const answer3 = document.querySelector('questionAware').value;
+    const answer3 = document.querySelector('input[name="questionAware"]:checked').value;
     const answer4 = document.querySelector('input[name="questionCybersecurity"]:checked').value;
     const answer5 = document.querySelector('input[name="questionResponsiblePrivacy"]:checked').value;
     const answer6 = document.querySelector('input[name="questionFreq"]:checked').value;
