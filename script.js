@@ -12,7 +12,7 @@ form.addEventListener('submit', (event) => {
 
   // EmailJS API
   (function() {
-    emailjs.init("service_tnkzhnv");
+    emailjs.init("v4LdSJqfieVrBLaXu");
   })();
   
   const templateParams = {
