@@ -1,7 +1,6 @@
 // JavaScript for validating the questionnaire and sending them to a database
+// JavaScript for validating the questionnaire and sending them to an email address
 const form = document.getElementById('questionnaire');
-
-
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -11,23 +10,26 @@ form.addEventListener('submit', (event) => {
   const answer3 = document.querySelector('input[name="questionEducation"]:checked').value;
   const answer4 = document.querySelector('input[name="questionIT"]:checked').value;
 
-  const xhr = new XMLHttpRequest();
-  xhr.open('POST', 'insert_data.php', true);
-  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-  xhr.onload = function () {
-    if (xhr.status === 200) {
-      alert(xhr.responseText);
-      location.href = 'questionnaire.html';
-    } else {
-      console.error(xhr.statusText);
-      alert('An error occurred while submitting your answers. Please try again later.');
-    }
+  // EmailJS API
+  (function() {
+    emailjs.init("service_tnkzhnv");
+  })();
+  
+  const templateParams = {
+    answer1: answer1,
+    answer2: answer2,
+    answer3: answer3,
+    answer4: answer4
   };
-  xhr.onerror = function () {
-    console.error(xhr.statusText);
-    alert('An error occurred while submitting your answers. Please try again later.');
-  };
-  xhr.send(`questionGender=${answer1}&questionAge=${answer2}&questionEducation=${answer3}&questionIT=${answer4}`);
+  
+  emailjs.send('my_service', 'my_template', templateParams)
+    .then(function(response) {
+       alert("Thank you for your answers.");
+       location.href = 'questionnaire.html';
+    }, function(error) {
+       console.error(error);
+       alert('An error occurred while submitting your answers. Please try again later.');
+    });
 });
 
 
