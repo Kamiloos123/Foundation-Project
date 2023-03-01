@@ -172,10 +172,13 @@
     
     emailjs.send('service_tnkzhnv', 'template_sg6471a', templateParams)
       .then(function(response) {
-         alert("Thank you for your answers. You can close this page now.");
+         location.href(Finish.html);
       }, function(error) {
          console.error(error);
          alert('An error occurred while submitting your answers. Please try again later.');
       });
-  });</script>
+  });
+
+
+</script>
 
