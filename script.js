@@ -2,37 +2,6 @@
 // JavaScript for validating the questionnaire and sending them to an email address
 const form = document.getElementById('questionnaire');
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const answer1 = document.querySelector('input[name="questionGender"]:checked').value;
-  const answer2 = document.querySelector('input[name="questionAge"]:checked').value;
-  const answer3 = document.querySelector('input[name="questionEducation"]:checked').value;
-  const answer4 = document.querySelector('input[name="questionIT"]:checked').value;
-
-  // EmailJS API
-  (function() {
-    emailjs.init("v4LdSJqfieVrBLaXu");
-  })();
-  
-  const templateParams = {
-    answer1: answer1,
-    answer2: answer2,
-    answer3: answer3,
-    answer4: answer4
-  };
-  
-  emailjs.send('service_tnkzhnv', 'template_pmnig42', templateParams)
-    .then(function(response) {
-       alert("Thank you for your answers.");
-       location.href = 'questionnaire.html';
-    }, function(error) {
-       console.error(error);
-       alert('An error occurred while submitting your answers. Please try again later.');
-    });
-});
-
-
 var chosen = null;
 
 // Get the modal
@@ -71,10 +40,41 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
-learnmore.onclick = function() {
-  chosen = "learnmore";
-  modal.style.display = "none";
-}
+
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const answer1 = document.querySelector('input[name="questionGender"]:checked').value;
+  const answer2 = document.querySelector('input[name="questionAge"]:checked').value;
+  const answer3 = document.querySelector('input[name="questionEducation"]:checked').value;
+  const answer4 = document.querySelector('input[name="questionIT"]:checked').value;
+
+  // EmailJS API
+  (function() {
+    emailjs.init("v4LdSJqfieVrBLaXu");
+  })();
+  
+  const templateParams = {
+    preanswer: chosen,
+    answer1: answer1,
+    answer2: answer2,
+    answer3: answer3,
+    answer4: answer4
+  };
+  
+  emailjs.send('service_tnkzhnv', 'template_pmnig42', templateParams)
+    .then(function(response) {
+       alert("Thank you for your answers.");
+       location.href = 'questionnaire.html';
+    }, function(error) {
+       console.error(error);
+       alert('An error occurred while submitting your answers. Please try again later.');
+    });
+});
+
+
+
 
 
 const ratingSelect = document.getElementById('rating-select');
